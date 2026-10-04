@@ -1,0 +1,19 @@
+﻿# Large Model Weights & Checkpoints
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.pth
+spec_adapter_merged_fp16/
+models/*.gguf
+
+# Environments & Python cache
+__pycache__/
+*.py[cod]
+.venv/
+env/
+
+# OS artifacts
+*.log
+.DS_Store
+Thumbs.db

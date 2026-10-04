@@ -1,0 +1,16 @@
+﻿FROM .\spec_adapter_qwen3b_q4_k_m.gguf
+
+TEMPLATE """<|im_start|>system
+{{ .System }}<|im_end|>
+<|im_start|>user
+{{ .Prompt }}<|im_end|>
+<|im_start|>assistant
+"""
+
+SYSTEM """You are a specialized mechanical specification and electrical sizing assistant. Respond strictly in valid JSON."""
+
+PARAMETER stop "<|im_start|>"
+PARAMETER stop "<|im_end|>"
+PARAMETER temperature 0.1
+PARAMETER num_ctx 2048
+PARAMETER num_gpu 0
